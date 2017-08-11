@@ -92,7 +92,9 @@ private[math] object Primality {
    *  @see BigInteger#probablePrime(int,Random)
    *  @see #isProbablePrime(BigInteger, int)
    */
-  def consBigInteger(bitLength: Int, certainty: Int, rnd: Random): BigInteger = {
+  def consBigInteger(bitLength: Int,
+                     certainty: Int,
+                     rnd: Random): BigInteger = {
     // PRE: bitLength >= 2
     // For small numbers get a random prime from the prime table
     if (bitLength <= 10) {

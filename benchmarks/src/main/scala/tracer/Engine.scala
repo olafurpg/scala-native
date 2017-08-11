@@ -52,7 +52,8 @@ class Engine(val config: EngineConfiguration) {
   }
 
   // 'canvasContext' can be null if raytracer runs as benchmark
-  def renderScene(scene: Scene, canvasContext: CanvasRenderingContext2D): Unit = {
+  def renderScene(scene: Scene,
+                  canvasContext: CanvasRenderingContext2D): Unit = {
     for {
       y <- 0 until config.canvasHeight
       x <- 0 until config.canvasWidth

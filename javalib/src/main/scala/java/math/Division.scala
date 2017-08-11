@@ -834,7 +834,9 @@ private[math] object Division {
    *  @param divisor the divisor
    *  @return remainder
    */
-  def remainderArrayByInt(src: Array[Int], srcLength: Int, divisor: Int): Int = {
+  def remainderArrayByInt(src: Array[Int],
+                          srcLength: Int,
+                          divisor: Int): Int = {
     var result: Long = 0
     var i            = srcLength - 1
     while (i >= 0) {

@@ -68,7 +68,8 @@ object Collections {
     binarySearchImpl(list, (elem: T) => c.compare(elem, key))
 
   @inline
-  private def binarySearchImpl[E](list: List[E], compareToKey: E => Int): Int = {
+  private def binarySearchImpl[E](list: List[E],
+                                  compareToKey: E => Int): Int = {
     def notFound(insertionPoint: Int): Int = {
       -insertionPoint - 1
     }

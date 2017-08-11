@@ -610,7 +610,9 @@ object Files {
     start
   }
 
-  def write(path: Path, bytes: Array[Byte], _options: Array[OpenOption]): Path = {
+  def write(path: Path,
+            bytes: Array[Byte],
+            _options: Array[OpenOption]): Path = {
     val options =
       if (_options.isEmpty)
         Array[OpenOption](StandardOpenOption.CREATE,

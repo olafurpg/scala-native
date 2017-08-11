@@ -1,6 +1,8 @@
 package cd
 
-class Motion(val callsign: CallSign, val posOne: Vector3D, val posTwo: Vector3D) {
+class Motion(val callsign: CallSign,
+             val posOne: Vector3D,
+             val posTwo: Vector3D) {
   def delta(): Vector3D =
     posTwo.minus(this.posOne);
 

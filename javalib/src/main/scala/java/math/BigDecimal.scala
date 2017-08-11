@@ -941,7 +941,8 @@ class BigDecimal() extends Number with Comparable[BigDecimal] {
     else new BigDecimal(integralValue, safeLongToInt(varScale))
   }
 
-  def divideToIntegralValue(divisor: BigDecimal, mc: MathContext): BigDecimal = {
+  def divideToIntegralValue(divisor: BigDecimal,
+                            mc: MathContext): BigDecimal = {
     // scalastyle:off return
     val mcPrecision   = mc.precision
     val diffPrecision = this.precision() - divisor.precision()

@@ -183,7 +183,8 @@ class InstCombine()(implicit fresh: Fresh) extends Pass {
     }
   }
 
-  def simplifyExt(inst: Inst, defop: DefOp)(implicit fresh: Fresh): Seq[Inst] = {
+  def simplifyExt(inst: Inst, defop: DefOp)(
+      implicit fresh: Fresh): Seq[Inst] = {
     inst match {
       // (x * z) + (y * z) = (x + y) * z
       case Let(n,

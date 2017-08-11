@@ -745,7 +745,8 @@ final class URI private () extends Comparable[URI] with Serializable {
    * occur in pairs as above
    */
 
-  private def equalsHexCaseInsensitive(first: String, second: String): Boolean = {
+  private def equalsHexCaseInsensitive(first: String,
+                                       second: String): Boolean = {
     if (first.indexOf('%') != second.indexOf('%')) {
       return first == second
     }
